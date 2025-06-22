@@ -7,7 +7,9 @@
 
 An intelligent, adaptive multiple-choice question (MCQ) generator that leverages advanced AI technology to create personalized diagnostic tests. The system dynamically adjusts question difficulty based on user performance and provides comprehensive analytics for enhanced learning outcomes.
 
-> 🚀 **Live Demo**: [Try it now!](https://your-app-url.streamlit.app) *(Deploy to get live URL)*
+> 🚀 **Live Demo**: [Try it now!](https://vrtejas-mcq-generator.streamlit.app)
+> 
+> 📺 **Video Demo**: [Watch the demo on YouTube](https://youtu.be/gdqv-hswWPY)
 
 ## 🌟 Key Features
 
