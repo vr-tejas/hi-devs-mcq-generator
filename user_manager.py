@@ -135,7 +135,7 @@ class UserManager:
         password_hash = self._hash_password(password)
         return password_hash == self.users[username]['password_hash']
     
-    def create_test(self, user_id, test_name, subject, topics, questions, adaptive=True):
+    def create_test(self, user_id, test_name, subject, topics, questions, difficulty='Medium', adaptive=True):
         """
         Create a new test for a user.
         
@@ -145,6 +145,7 @@ class UserManager:
             subject (str): Subject
             topics (list): List of topics
             questions (list): List of question dictionaries
+            difficulty (str): Difficulty level
             adaptive (bool): Whether the test is adaptive
             
         Returns:
@@ -157,6 +158,7 @@ class UserManager:
             'test_name': test_name,
             'subject': subject,
             'topics': topics,
+            'difficulty': difficulty,
             'questions': questions,
             'created_at': datetime.now().isoformat(),
             'created_by': user_id,
@@ -252,18 +254,34 @@ class UserManager:
     
     def get_all_test_results(self, user_id):
         """
-        Get all test results for a user.
+        Get all test results for a user with test metadata.
         
         Args:
             user_id (str): User ID
             
         Returns:
-            list: List of test results
+            list: List of test results with metadata
         """
         if user_id not in self.results:
             return []
         
-        return list(self.results[user_id].values())
+        enriched_results = []
+        for test_id, result in self.results[user_id].items():
+            # Get the test metadata
+            test = self.tests.get(test_id, {})
+            
+            # Create enriched result with test metadata
+            enriched_result = result.copy()
+            enriched_result.update({
+                'subject': test.get('subject', 'General'),
+                'topics': test.get('topics', ['General']),
+                'difficulty': test.get('difficulty', 'Medium'),  # Get from test data if available
+                'test_id': test_id
+            })
+            
+            enriched_results.append(enriched_result)
+        
+        return enriched_results
     
     def get_user_performance(self, user_id):
         """

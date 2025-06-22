@@ -1,1 +1,87 @@
-{}
+{
+  "example": {
+    "c676e7cd-0967-4e41-a66c-bb7884cd4396": {
+      "test_id": "c676e7cd-0967-4e41-a66c-bb7884cd4396",
+      "test_name": "networking",
+      "total_questions": 10,
+      "correct_answers": 2,
+      "score": 20.0,
+      "answers": [
+        {
+          "question_index": 0,
+          "question": "Which of these is a true characteristic of a protocol stack?",
+          "user_answer": "It facilitates communication between devices.",
+          "correct_answer": "It provides a layered architecture for network communication.",
+          "is_correct": false
+        },
+        {
+          "question_index": 1,
+          "question": "Which networking device is responsible for connecting wired devices like computers and printers?",
+          "user_answer": "Router",
+          "correct_answer": "Switch",
+          "is_correct": false
+        },
+        {
+          "question_index": 2,
+          "question": "What is the importance of network segmentation?",
+          "user_answer": "Enables robust security measures for individual devices",
+          "correct_answer": "Helps maintain a secure network infrastructure",
+          "is_correct": false
+        },
+        {
+          "question_index": 3,
+          "question": "Which of these is a symptom of IPv6 addressing?",
+          "user_answer": "Longer URLs",
+          "correct_answer": "Enhanced scalability",
+          "is_correct": false
+        },
+        {
+          "question_index": 4,
+          "question": "What is the purpose of a router in a network?",
+          "user_answer": "Deliver data packets between devices",
+          "correct_answer": "Deliver data packets between devices",
+          "is_correct": true
+        },
+        {
+          "question_index": 5,
+          "question": "Which of these is a benefit of DNS over IP address parsing?",
+          "user_answer": "Simplified hostname resolution",
+          "correct_answer": "Simplified hostname resolution",
+          "is_correct": true
+        },
+        {
+          "question_index": 6,
+          "question": "What is the purpose of the DHCP protocol?",
+          "user_answer": "Manage network device authentication",
+          "correct_answer": "Assign unique IP addresses to devices",
+          "is_correct": false
+        },
+        {
+          "question_index": 7,
+          "question": "Which model is widely used for packet switching?, Select all that apply",
+          "user_answer": "Virtual Circuit Model",
+          "correct_answer": [
+            "Datagram Model",
+            "Connectionless Model"
+          ],
+          "is_correct": false
+        },
+        {
+          "question_index": 8,
+          "question": "What is the primary purpose of a firewall?",
+          "user_answer": "Protect devices from malware",
+          "correct_answer": "Filter and monitor incoming network traffic",
+          "is_correct": false
+        },
+        {
+          "question_index": 9,
+          "question": "Which networking device is used to interconnect different networks within a building?",
+          "user_answer": "Router",
+          "correct_answer": "Bridge",
+          "is_correct": false
+        }
+      ],
+      "timestamp": "2025-06-22T05:52:38.999533"
+    }
+  }
+}

@@ -141,10 +141,17 @@ Difficulty Level: {difficulty}
 """
             
             if custom_description:
-                prompt += f"Custom Requirements: {custom_description}\n"
+                prompt += f"""
+IMPORTANT CUSTOM REQUIREMENTS (MUST FOLLOW EXACTLY): {custom_description}
+
+CRITICAL: The questions MUST strictly follow the custom requirements above. Do not deviate from the specified topic or requirements.
+"""
             
             if content and len(content.strip()) > 50:
                 prompt += f"Base the questions on this educational content: {content}\n"
+            
+            # Prioritize custom description over general topics if provided
+            focus_area = custom_description if custom_description else topics_str
             
             prompt += f"""
 Requirements for each question:
@@ -152,7 +159,8 @@ Requirements for each question:
 2. Each question should have exactly 4 multiple choice options
 3. Mark the correct answer clearly
 4. Make sure the difficulty is {difficulty}
-5. Questions should be educational and test understanding of {topics_str}
+5. Questions should be educational and test understanding of: {focus_area}
+6. STRICTLY FOLLOW the custom requirements if provided - do not include questions about other topics
 
 Format your response as a valid JSON array like this example:
 [
@@ -177,7 +185,7 @@ Generate the questions now:"""
                 model="command",
                 prompt=prompt,
                 max_tokens=3000,
-                temperature=0.7,
+                temperature=0.3,  # Lower temperature for more focused, instruction-following responses
                 stop_sequences=[]
             )
             

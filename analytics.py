@@ -41,26 +41,29 @@ class PerformanceAnalytics:
             reverse=True
         )[:10]
         
-        # update topic performance (simplified approach)
-        # in a real application, each question would have its topic and difficulty level
+        # update topic performance using actual test data
         if 'answers' in test_results:
             topic_correct = defaultdict(int)
             topic_total = defaultdict(int)
             difficulty_correct = defaultdict(int)
             difficulty_total = defaultdict(int)
             
+            # Get actual test metadata
+            test_subject = test_results.get('subject', 'General')
+            test_topics = test_results.get('topics', ['General'])
+            test_difficulty = test_results.get('difficulty', 'Medium')
+            
             for answer in test_results['answers']:
-                # Assume each answer has a topic and difficulty level
-                # In this simplified version, we'll use placeholders
-                topic = 'General'  # This would come from the question metadata
-                difficulty = 'Medium'  # This would come from the question metadata
+                # Use actual test metadata
+                # Since all questions in a test share the same topic/difficulty in this system
+                for topic in test_topics:
+                    topic_total[topic] += 1
+                    if answer.get('is_correct', False):
+                        topic_correct[topic] += 1
                 
-                topic_total[topic] += 1
-                difficulty_total[difficulty] += 1
-                
+                difficulty_total[test_difficulty] += 1
                 if answer.get('is_correct', False):
-                    topic_correct[topic] += 1
-                    difficulty_correct[difficulty] += 1
+                    difficulty_correct[test_difficulty] += 1
             
             # Update topic performance
             for topic, total in topic_total.items():

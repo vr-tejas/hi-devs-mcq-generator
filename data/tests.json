@@ -242,5 +242,308 @@
     "created_at": "2025-06-18T17:41:03.491331",
     "created_by": "tejas",
     "adaptive": true
+  },
+  "c676e7cd-0967-4e41-a66c-bb7884cd4396": {
+    "test_name": "dsa",
+    "subject": "Computer Science",
+    "topics": [
+      "Data Structures"
+    ],
+    "questions": [
+      {
+        "question": "Which sorting algorithm can work with any type of data and is suitable for large data sets?",
+        "options": [
+          "Bubble Sort",
+          "Radix Sort",
+          "Quick Sort",
+          "Merge Sort"
+        ],
+        "correct_answer": "Merge Sort",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "How many layers does a binary tree have?",
+        "options": [
+          "1",
+          "2",
+          "4",
+          "Infinite"
+        ],
+        "correct_answer": "2",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "What is the time complexity of inserting an element in the middle of a Binary Search Tree?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n\u00b2)"
+        ],
+        "correct_answer": "O(n)",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a valid binary tree operation?",
+        "options": [
+          "Insert",
+          "Search",
+          "Delete",
+          "Update"
+        ],
+        "correct_answer": "Update",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "What is the maximum size array that JavaScript can handle?",
+        "options": [
+          "2GB",
+          "256MB",
+          "4GB",
+          "512MB"
+        ],
+        "correct_answer": "4GB",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a valid type of array in JavaScript?",
+        "options": [
+          "Number",
+          "String",
+          "Boolean",
+          "Object"
+        ],
+        "correct_answer": "Object",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "What is the maximum number of dimensions that a multidimensional array can have in JavaScript?",
+        "options": [
+          "1",
+          "2",
+          "10",
+          "Unlimited"
+        ],
+        "correct_answer": "2",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "What is the average time complexity of inserting an element in a dynamic array?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n\u00b2)"
+        ],
+        "correct_answer": "O(1)",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a valid method for checking if an array is empty?",
+        "options": [
+          "isEmpty",
+          "length==0",
+          "length===0",
+          "Array.isEmpty()"
+        ],
+        "correct_answer": "length==0",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a valid approach for checking if a given element exists in an array?",
+        "options": [
+          "indexOf() != -1",
+          "findIndex() != -1",
+          "in Array().",
+          "toLowerCase() != null"
+        ],
+        "correct_answer": "indexOf() != -1",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of the following is not a subset of Array methods?",
+        "options": [
+          "Filter",
+          "Map",
+          "Reduce",
+          "Flatten"
+        ],
+        "correct_answer": "Flatten",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a valid approach for finding the index of the largest element in an array?",
+        "options": [
+          "result = 0; for (var i = 0; i < arr.length; i++) {if (arr[i] > arr[result]) { result = i; }}",
+          "arr.forEach((element, index) => {if (element > arr[index]) { console.log(index); } });",
+          "arr.sort(); console.log(arr.length - 1)",
+          "maxIndex = 0; for (var i = 0; i < arr.length; i++) { if (arr[i] > arr[maxIndex]) { maxIndex = i; } }"
+        ],
+        "correct_answer": "arr.forEach((element, index) => {if (element > arr[index]) { console.log(index); } });",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of the following is not a valid way to create a deep copy of an array?",
+        "options": [
+          "Array.prototype.slice.call(",
+          "new Array(arr);",
+          "JSON.parse(JSON.stringify(arr))",
+          "arr.map((x) => Object.create(Object.assign({}, x)))",
+          "let copy = []; arr.forEach((element) => {copy.push(Object.create(Object.assign({}, element))); })"
+        ],
+        "correct_answer": "new Array(arr);",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a valid way to iterate over an array?",
+        "options": [
+          "for (var i = 0; i < arr.length; i++)",
+          "while (i < arr.length) { var element = arr[i];",
+          "for (var element in arr) { if (arr.propertyIsEnumerable(element)) {",
+          "for (var i = 0; i < arr.size; i++)"
+        ],
+        "correct_answer": "for (var i = 0; i < arr.length; i++)",
+        "difficulty": "Medium"
+      },
+      {
+        "question": "Which of these is not a built-in method to convert an array to a string?",
+        "options": [
+          "Array.prototype.toString",
+          "Array.prototype.toJSON",
+          "Array.prototype.join",
+          "Array.prototype.toLocaleString"
+        ],
+        "correct_answer": "Array.prototype.toJSON",
+        "difficulty": "Medium"
+      }
+    ],
+    "created_at": "2025-06-22T05:28:32.314723",
+    "created_by": "example",
+    "adaptive": true
+  },
+  "c9006519-3749-4d24-91e2-b3c9a4f65a10": {
+    "test_name": "networking",
+    "subject": "Computer Science",
+    "topics": [
+      "Networking"
+    ],
+    "questions": [
+      {
+        "question": "Which of these is a true characteristic of a protocol stack?",
+        "options": [
+          "It facilitates communication between devices.",
+          "It provides a layered architecture for network communication.",
+          "It implements methods for reliable data transmission.",
+          "It offers various APIs for different network protocols."
+        ],
+        "correct_answer": "It provides a layered architecture for network communication.",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which networking device is responsible for connecting wired devices like computers and printers?",
+        "options": [
+          "Router",
+          "Switch",
+          "Hub",
+          "Gateway"
+        ],
+        "correct_answer": "Switch",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the importance of network segmentation?",
+        "options": [
+          "Enables robust security measures for individual devices",
+          "Helps maintain a secure network infrastructure",
+          "Facilitates individual device monitoring",
+          "Simplifies network maintenance and update procedures"
+        ],
+        "correct_answer": "Helps maintain a secure network infrastructure",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of these is a symptom of IPv6 addressing?",
+        "options": [
+          "Longer URLs",
+          "Complex header processing",
+          "Enhanced scalability",
+          "Expired domain recognition"
+        ],
+        "correct_answer": "Enhanced scalability",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the purpose of a router in a network?",
+        "options": [
+          "Deliver data packets between devices",
+          "Interpret network layer addresses",
+          "Ensure data reliability",
+          "Facilitate network layer protocols"
+        ],
+        "correct_answer": "Deliver data packets between devices",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which of these is a benefit of DNS over IP address parsing?",
+        "options": [
+          "Simplified hostname resolution",
+          "Enhanced security",
+          "Improved IPv6 compatibility",
+          "Faster data transmission"
+        ],
+        "correct_answer": "Simplified hostname resolution",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the purpose of the DHCP protocol?",
+        "options": [
+          "Manage network device authentication",
+          "Assign unique IP addresses to devices",
+          "Facilitate data encryption",
+          "Maximize network performance"
+        ],
+        "correct_answer": "Assign unique IP addresses to devices",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which model is widely used for packet switching?, Select all that apply",
+        "options": [
+          "Virtual Circuit Model",
+          "Datagram Model",
+          "Connectionless Model",
+          "Connection-Oriented Model"
+        ],
+        "correct_answer": [
+          "Datagram Model",
+          "Connectionless Model"
+        ],
+        "difficulty": "Hard"
+      },
+      {
+        "question": "What is the primary purpose of a firewall?",
+        "options": [
+          "Protect devices from malware",
+          "Encrypt network communication",
+          "Filter and monitor incoming network traffic",
+          "Relay IP addresses to relevant networks"
+        ],
+        "correct_answer": "Filter and monitor incoming network traffic",
+        "difficulty": "Hard"
+      },
+      {
+        "question": "Which networking device is used to interconnect different networks within a building?",
+        "options": [
+          "Router",
+          "Switch",
+          "Bridge",
+          "Hub"
+        ],
+        "correct_answer": "Bridge",
+        "difficulty": "Hard"
+      }
+    ],
+    "created_at": "2025-06-22T05:52:19.352105",
+    "created_by": "example",
+    "adaptive": true
   }
 }
